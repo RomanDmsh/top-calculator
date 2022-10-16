@@ -2,9 +2,19 @@ const display = document.querySelector('input');
 
 const numberButtons = document.querySelectorAll('.numbers button');
 numberButtons.forEach((item) => {
-	item.addEventListener('click', () => {
-		displayText(item.textContent);
-	});
+	if (item.textContent == 'C') {
+		item.addEventListener('click', () => {
+			clearText();
+		});
+	} else if (item.textContent == '<-') {
+		item.addEventListener('click', () => {
+			correctText();
+		});
+	} else {
+		item.addEventListener('click', () => {
+			displayText(item.textContent);
+		});
+	}
 });
 const operationButtons = document.querySelectorAll('.operations button');
 let operationType = '';
@@ -25,6 +35,13 @@ operationButtons.forEach((item) => {
 function displayText(text) {
 	display.value += text;
 }
+function clearText() {
+	display.value = '';
+}
+function correctText() {
+	display.value = display.value.slice(0, display.value.length - 1);
+}
+
 function displayResult(text) {
 	display.value = text;
 }
