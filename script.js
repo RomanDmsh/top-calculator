@@ -1,5 +1,22 @@
 const display = document.querySelector('input');
 
+function displayText(text) {
+	display.value += text;
+}
+function clearText() {
+	display.value = '';
+	operationType = '';
+}
+function correctText() {
+	let lastSymbol = display.value.charAt(display.value.length - 1);
+	if (isNaN(+lastSymbol)) operationType = '';
+	display.value = display.value.slice(0, display.value.length - 1);
+}
+
+function displayResult(text) {
+	display.value = text;
+}
+
 const numberButtons = document.querySelectorAll('.numbers button');
 numberButtons.forEach((item) => {
 	if (item.textContent == 'C') {
@@ -31,20 +48,6 @@ operationButtons.forEach((item) => {
 		});
 	}
 });
-
-function displayText(text) {
-	display.value += text;
-}
-function clearText() {
-	display.value = '';
-}
-function correctText() {
-	display.value = display.value.slice(0, display.value.length - 1);
-}
-
-function displayResult(text) {
-	display.value = text;
-}
 
 function calculate(typeOfOperation) {
 	let raw = display.value;
