@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+
+:root {
+    --color-blue: #457B9D;
+    --color-dark-blue: #1D3557;
+    --color-dark-green: #2E933C;
+    --color-green: #81C14B;
+    --color-peach: #F7C59F;
+}
+
+body {
+    background-color: var(--color-peach);
+
+}
+
+
+button,
+input {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2rem;
+    color: white;
+    border: none;
+    border-radius: 10px;
+
+}
+
+input {
+    text-align: right;
+}
+
+button {
+    height: 5rem;
+    width: 5rem;
+}
+
+input {
+    width: 30rem;
+    color: black;
+}
+
+.numbers button {
+    background-color: var(--color-blue);
+}
+
+.operations button {
+    background-color: var(--color-dark-blue);
+}
+
+
+.numbers,
+.operations {
+    display: grid;
+    gap: 1rem;
+
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: auto;
+    width: max-content;
+}
+
+.buttons-area {
+    display: flex;
+    gap: 1rem;
+
+}
+
+.operations {
+    grid-template-columns: repeat(2, 1fr);
+    /* gap: ; */
+    width: fit-content;
+    align-self: flex-start;
+
+}
+
+.numbers {
+    grid-template-columns: repeat(3, 1fr);
+    width: fit-content;
+
+}
