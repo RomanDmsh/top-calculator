@@ -2,9 +2,9 @@
 
 :root {
     --color-blue: #457B9D;
+    --color-blue-shaded: #254355;
     --color-dark-blue: #1D3557;
-    --color-dark-green: #2E933C;
-    --color-green: #81C14B;
+    --color-dark-blue-shaded: #080f1a;
     --color-peach: #F7C59F;
 }
 
@@ -22,6 +22,14 @@ input {
     border: none;
     border-radius: 10px;
 
+}
+
+.operations button:active {
+    background-color: var(--color-dark-blue-shaded);
+}
+
+.numbers button:active {
+    background-color: var(--color-blue-shaded);
 }
 
 input {

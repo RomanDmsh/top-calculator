@@ -1,5 +1,12 @@
+const buttons = document.querySelectorAll('button');
+// buttons.forEach((item) => {
+// 	item.addEventListener('mousedown', () => {
+// 		item.style.background =
+// 			'linear-gradient(rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%)';
+// 	});
+// });
 const display = document.querySelector('input');
-
+// input functions
 function displayText(text) {
 	display.value += text;
 }
@@ -12,12 +19,12 @@ function correctText() {
 	if (isNaN(+lastSymbol)) operationType = '';
 	display.value = display.value.slice(0, display.value.length - 1);
 }
-
 function displayResult(text) {
 	display.value = text;
 }
 
 const numberButtons = document.querySelectorAll('.numbers button');
+// number buttons click events
 numberButtons.forEach((item) => {
 	if (item.textContent == 'C') {
 		item.addEventListener('click', () => {
@@ -35,6 +42,7 @@ numberButtons.forEach((item) => {
 });
 const operationButtons = document.querySelectorAll('.operations button');
 let operationType = '';
+// operation buttons click events
 operationButtons.forEach((item) => {
 	if (item.textContent != '=') {
 		item.addEventListener('click', () => {
