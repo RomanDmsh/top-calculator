@@ -46,6 +46,13 @@ operationButtons.forEach((item) => {
 				operationType = '';
 			}
 		});
+	} else {
+		item.addEventListener('click', () => {
+			if (operationType !== '') {
+				displayResult(calculate(operationType));
+				operationType = '';
+			}
+		});
 	}
 });
 
